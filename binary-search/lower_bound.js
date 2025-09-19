@@ -19,7 +19,7 @@ function lower_bound(arr, key) {
 
 
 function lower_bound_rec(arr, key, low, high) {
-  if (low > high) return -Infinity
+  if (low > high) return -1
 
     const mid = Math.ceil((low + high) / 2)
     if(arr[mid] < key) return lower_bound_rec(arr, key, mid + 1, high)
@@ -27,4 +27,4 @@ function lower_bound_rec(arr, key, low, high) {
 }
 
 
-console.log(lower_bound([1,3,5,8,9], 4))
+console.log(lower_bound([1,3, 4, 5,8,9], 4))
